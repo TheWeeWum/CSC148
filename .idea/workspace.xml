@@ -7,7 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb778f51-c6cb-45f2-a6b3-a06d1348be86" name="Changes" comment="" />
+    <list default="true" id="bb778f51-c6cb-45f2-a6b3-a06d1348be86" name="Changes" comment="InitialPush, for sharing between computers">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/148/assignments/a1/a1/survey.py" beforeDir="false" afterPath="$PROJECT_DIR$/148/assignments/a1/a1/survey.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/148/assignments/a1/a1/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/148/assignments/a1/a1/tests.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +19,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c6e71a93-3320-4e35-bd0a-7c2dc36fff21" />
+        <option name="url" value="https://github.com/TheWeeWum/CSC148" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -25,15 +42,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/liamc/PycharmProjects/csc148",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/liamc/PycharmProjects/csc148&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\liamc\PycharmProjects\csc148\148\assignments\a1\a1" />
@@ -43,7 +62,7 @@
       <recent name="C:\Users\liamc\PycharmProjects\csc148\148\assignments\a1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager">
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="csc148" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,7 +193,37 @@
       <option name="presentableId" value="Default" />
       <updated>1673621097306</updated>
     </task>
+    <task id="LOCAL-00001" summary="InitialPush, for sharing between computers">
+      <created>1678131744924</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678131744924</updated>
+    </task>
+    <task id="LOCAL-00002" summary="InitialPush, for sharing between computers">
+      <created>1678131893563</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678131893563</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="InitialPush, for sharing between computers" />
+    <option name="LAST_COMMIT_MESSAGE" value="InitialPush, for sharing between computers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -49,6 +49,8 @@ class Question:
 
     def __init__(self, id_: int, text: str) -> None:
         """Initialize this question with the text <text>."""
+        if text == "":
+            raise ValueError("Text can not be the empty string")
         self.id = id_
         self.text = text
 

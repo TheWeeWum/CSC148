@@ -378,6 +378,28 @@ class TestStudent:
         stu.set_answer(question, new_ans)
         assert stu.get_answer(question) is new_ans
 
+    def test_replace_answer(self) -> None:
+        stu = Student(0, "Liam")
+        question = NumericQuestion(0, "How old are you", 16, 100)
+        ans = Answer('ten')
+        stu.set_answer(question, ans)
+        assert stu.get_answer(question) is ans
+        new_ans = Answer(50)
+        stu.set_answer(question, new_ans)
+        assert stu.get_answer(question) is new_ans
+        assert len(stu._answers) == 1
+
+    def test_(self) -> None:
+        stu = Student(0, "Liam")
+        question = NumericQuestion(0, "How old are you", 16, 100)
+        ans = Answer('ten')
+        stu.set_answer(question, ans)
+        assert stu.get_answer(question) is ans
+        new_ans = Answer(50)
+        stu.set_answer(question, new_ans)
+        assert stu.get_answer(question) is new_ans
+        assert len(stu._answers) == 1
+
     def test_general_get_answer(self) -> None:
         stu = Student(0, "Liam")
         question1 = MultipleChoiceQuestion(0, "Dogs or Cats", ['d', 'c'])
@@ -390,6 +412,13 @@ class TestStudent:
         assert stu.get_answer(question1).content == 'c'
 
         assert stu.get_answer(Question(1, "No answer")) is None
+
+    def test_get_invalid(self):
+        student = Student(0, 'Liam')
+        question = NumericQuestion(0, "How old are you", 16, 100)
+        ans = Answer('ten')
+        student.set_answer(question, ans)
+        assert student.get_answer(question) is ans
 
 
 ###############################################################################
@@ -433,6 +462,8 @@ class TestCourse:
         with pytest.raises(ValueError):
             course.enroll_students([Student(0, "")])
 
+    def test_same_student_ids(self):
+        course = Course('Test')
         assert len(course.get_students()) == 0
 
         course.enroll_students([Student(0, "Student1"), Student(0, "Student1")])
@@ -490,7 +521,6 @@ class TestCourse:
 ###############################################################################
 # Task 4 Test cases QUESTION CLASSES
 ###############################################################################
-# TODO: ADD MORE TESTS LATER
 class TestQuestion:
     def test_multiple_choice_class_general(self) -> None:
         question = mc_question
@@ -717,9 +747,25 @@ class TestCriterion:
         answers.append(Answer(['b', 'e', 'a']))
         assert hom.score_answers(q, answers) == 2 / 3
 
-        q = NumericQuestion(0, "", 1, 6)
+        q = NumericQuestion(0, "Test", 1, 6)
         answers = [Answer(3), Answer(2), Answer(3), Answer(3)]
         assert round(hom.score_answers(q, answers), 5) == 0.9
+
+    def test_yes_no_empty_text(self):
+        with pytest.raises(ValueError):
+            q = YesNoQuestion(0, "")
+
+    def test_mc_empty_text(self):
+        with pytest.raises(ValueError):
+            q = MultipleChoiceQuestion(0, "", ['a', 'b', 'c', 'd', 'e'])
+
+    def test_num_empty_text(self):
+        with pytest.raises(ValueError):
+            q = NumericQuestion(0, "", 0, 100)
+
+    def test_check_empty_text(self):
+        with pytest.raises(ValueError):
+            q = CheckboxQuestion(0, "", ['a', 'b', 'c', 'd', 'e'])
 
     def test_heterogeneous_general(self) -> None:
         numeric = num_question
@@ -959,7 +1005,6 @@ class TestSurvey:
 
     def test_str_survey(self) -> None:
         survey = Survey(list_of_questions1)
-        # TODO: CRITERIA IN PRINT NOT YET COMPLETED
         string = "Questions:"
         for q in list_of_questions1:
             string += "\n" + q.__str__() + "\n"
