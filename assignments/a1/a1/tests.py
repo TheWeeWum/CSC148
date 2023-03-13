@@ -490,7 +490,6 @@ class TestCourse:
 ###############################################################################
 # Task 4 Test cases QUESTION CLASSES
 ###############################################################################
-# TODO: ADD MORE TESTS LATER
 class TestQuestion:
     def test_multiple_choice_class_general(self) -> None:
         question = mc_question
@@ -553,7 +552,6 @@ class TestQuestion:
         assert question.get_similarity(Answer(False), Answer(False)) == 1.0
         assert question.get_similarity(Answer(False), Answer(True)) == 0.0
         assert question.get_similarity(Answer(True), Answer(False)) == 0.0
-
 
     def test_check_box_question_general(self) -> None:
         question = cb_question
@@ -959,7 +957,6 @@ class TestSurvey:
 
     def test_str_survey(self) -> None:
         survey = Survey(list_of_questions1)
-        # TODO: CRITERIA IN PRINT NOT YET COMPLETED
         string = "Questions:"
         for q in list_of_questions1:
             string += "\n" + q.__str__() + "\n"
